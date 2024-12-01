@@ -1,0 +1,12 @@
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/TogetherCulture.Core.csproj.AssemblyReference.cache
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/TogetherCulture.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/TogetherCulture.Core.AssemblyInfoInputs.cache
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/TogetherCulture.Core.AssemblyInfo.cs
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/TogetherCulture.Core.csproj.CoreCompileInputs.cache
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/bin/Debug/net6.0/TogetherCulture.Core.deps.json
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/bin/Debug/net6.0/TogetherCulture.Core.dll
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/bin/Debug/net6.0/TogetherCulture.Core.pdb
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/TogetherCulture.Core.dll
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/refint/TogetherCulture.Core.dll
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/TogetherCulture.Core.pdb
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Core/obj/Debug/net6.0/ref/TogetherCulture.Core.dll

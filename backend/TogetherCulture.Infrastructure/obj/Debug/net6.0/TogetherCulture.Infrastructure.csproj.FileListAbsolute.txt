@@ -1,0 +1,17 @@
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.csproj.AssemblyReference.cache
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.AssemblyInfoInputs.cache
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.AssemblyInfo.cs
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.csproj.CoreCompileInputs.cache
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/bin/Debug/net6.0/TogetherCulture.Infrastructure.deps.json
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/bin/Debug/net6.0/TogetherCulture.Infrastructure.runtimeconfig.json
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/bin/Debug/net6.0/TogetherCulture.Infrastructure.dll
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/bin/Debug/net6.0/TogetherCulture.Infrastructure.pdb
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/bin/Debug/net6.0/TogetherCulture.Core.dll
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/bin/Debug/net6.0/TogetherCulture.Core.pdb
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.csproj.CopyComplete
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.dll
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/refint/TogetherCulture.Infrastructure.dll
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.pdb
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/TogetherCulture.Infrastructure.genruntimeconfig.cache
+/home/lloyd/Documents/github/csharp-30th/backend/TogetherCulture.Infrastructure/obj/Debug/net6.0/ref/TogetherCulture.Infrastructure.dll
