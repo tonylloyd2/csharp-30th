@@ -12,11 +12,13 @@ export function useAuth() {
     try {
       setError('');
       setLoading(true);
-      await authService.login(credentials);
+      console.log('Login attempt with:', credentials);
+      const result = await authService.login(credentials);
+      console.log('Login successful:', result);
       navigate('/dashboard');
     } catch (err: any) {
-      setError(err.message || 'Login failed');
-      throw err;
+      console.error('Login error in hook:', err);
+      setError(err.message || 'An unexpected error occurred during login');
     } finally {
       setLoading(false);
     }
@@ -26,11 +28,13 @@ export function useAuth() {
     try {
       setError('');
       setLoading(true);
-      await authService.register(userData);
+      console.log('Registration attempt with:', userData);
+      const result = await authService.register(userData);
+      console.log('Registration successful:', result);
       navigate('/dashboard');
     } catch (err: any) {
-      setError(err.message || 'Registration failed');
-      throw err;
+      console.error('Registration error in hook:', err);
+      setError(err.message || 'An unexpected error occurred during registration');
     } finally {
       setLoading(false);
     }

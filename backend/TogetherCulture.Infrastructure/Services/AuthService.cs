@@ -13,8 +13,8 @@ namespace TogetherCulture.Infrastructure.Services
     public class AuthService : IAuthService
     {
         private readonly IGenericRepository<User> _userRepository;
-        private readonly IConfiguration _configuration;
         private readonly IGenericRepository<Member> _memberRepository;
+        private readonly IConfiguration _configuration;
 
         public AuthService(
             IGenericRepository<User> userRepository,
@@ -51,7 +51,9 @@ namespace TogetherCulture.Infrastructure.Services
                     IsActive = true
                 };
 
+                // Add user and save changes to get the user ID
                 await _userRepository.AddAsync(user);
+                await _userRepository.SaveChangesAsync();
 
                 // Create associated member record
                 var member = new Member
@@ -64,7 +66,9 @@ namespace TogetherCulture.Infrastructure.Services
                     Interests = new List<InterestType>()
                 };
 
+                // Add member and save changes
                 await _memberRepository.AddAsync(member);
+                await _memberRepository.SaveChangesAsync();
 
                 // Generate JWT token
                 var token = GenerateJwtToken(user);
@@ -75,7 +79,8 @@ namespace TogetherCulture.Infrastructure.Services
                     Token = token,
                     Email = user.Email,
                     FirstName = user.FirstName,
-                    LastName = user.LastName
+                    LastName = user.LastName,
+                    UserId = user.Id
                 };
             }
             catch (Exception ex)
@@ -132,7 +137,8 @@ namespace TogetherCulture.Infrastructure.Services
                     Token = token,
                     Email = user.Email,
                     FirstName = user.FirstName,
-                    LastName = user.LastName
+                    LastName = user.LastName,
+                    UserId = user.Id
                 };
             }
             catch (Exception ex)

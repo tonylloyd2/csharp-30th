@@ -122,11 +122,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("CorsPolicy");
 
 // Add global error handling middleware
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
-app.UseCors("CorsPolicy");
 
 app.UseAuthentication();
 app.UseAuthorization();
