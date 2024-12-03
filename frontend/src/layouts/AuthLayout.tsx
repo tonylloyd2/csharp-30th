@@ -1,7 +1,8 @@
 import { Container, Paper } from '@mantine/core';
+import { ReactNode } from 'react';
 
 interface AuthLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function AuthLayout({ children }: AuthLayoutProps) {

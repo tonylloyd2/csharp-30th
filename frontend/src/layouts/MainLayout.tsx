@@ -1,6 +1,12 @@
-import { AppShell, Navbar, Header, Text, UnstyledButton, Group, ThemeIcon, rem } from '@mantine/core';
-import { IconDashboard, IconUser, IconGift, IconCalendar, IconUsers, IconSettings } from '@tabler/icons-react';
+import { AppShell, Burger, Group, Text, UnstyledButton, ThemeIcon, rem, ActionIcon } from '@mantine/core';
+import { IconDashboard, IconUser, IconGift, IconCalendar, IconUsers, IconSettings, IconSun, IconMoon } from '@tabler/icons-react';
 import { useNavigate, Outlet } from 'react-router-dom';
+import { useState } from 'react';
+
+interface MainLayoutProps {
+  onToggleTheme: () => void;
+  colorScheme: 'light' | 'dark';
+}
 
 const mainLinks = [
   { icon: IconDashboard, label: 'Dashboard', link: '/dashboard' },
@@ -11,54 +17,104 @@ const mainLinks = [
   { icon: IconSettings, label: 'Settings', link: '/settings' },
 ];
 
-export function MainLayout() {
+export function MainLayout({ onToggleTheme, colorScheme }: MainLayoutProps) {
   const navigate = useNavigate();
+  const [opened, setOpened] = useState(false);
 
   return (
     <AppShell
+      header={{ height: 60 }}
+      navbar={{ 
+        width: 300, 
+        breakpoint: 'sm',
+        collapsed: { mobile: !opened }
+      }}
       padding="md"
-      navbar={
-        <Navbar width={{ base: 300 }} p="xs">
-          {mainLinks.map((item) => (
-            <UnstyledButton
-              key={item.label}
-              onClick={() => navigate(item.link)}
-              sx={(theme) => ({
-                display: 'block',
-                width: '100%',
-                padding: theme.spacing.xs,
-                borderRadius: theme.radius.sm,
-                color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
-                '&:hover': {
-                  backgroundColor:
-                    theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-                },
-              })}
-            >
-              <Group>
-                <ThemeIcon size={30} variant="light">
-                  <item.icon style={{ width: rem(18), height: rem(18) }} />
-                </ThemeIcon>
-                <Text size="sm">{item.label}</Text>
-              </Group>
-            </UnstyledButton>
-          ))}
-        </Navbar>
-      }
-      header={
-        <Header height={60} p="xs">
-          <Group position="apart">
-            <Text size="xl" weight={700}>TogetherCulture</Text>
-          </Group>
-        </Header>
-      }
-      styles={(theme) => ({
+      bg="dark.8"
+      styles={{
         main: {
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
-        },
-      })}
+          backgroundColor: 'var(--mantine-color-dark-8)',
+          color: 'var(--mantine-color-dark-0)'
+        }
+      }}
     >
-      <Outlet />
+      <AppShell.Header 
+        p="md" 
+        style={{ 
+          backgroundColor: 'var(--mantine-color-dark-7)', 
+          borderBottom: '1px solid var(--mantine-color-dark-4)' 
+        }}
+      >
+        <Group justify="space-between">
+          <Group>
+            <Burger
+              opened={opened}
+              onClick={() => setOpened(!opened)}
+              hiddenFrom="sm"
+              size="sm"
+              color="var(--mantine-color-brand-5)"
+            />
+            <Text 
+              size="xl" 
+              fw={700} 
+              c="brand.0"
+            >
+              TogetherCulture
+            </Text>
+          </Group>
+          <ActionIcon
+            variant="outline"
+            color="brand"
+            onClick={onToggleTheme}
+            size="lg"
+          >
+            {colorScheme === 'dark' ? (
+              <IconSun size={18} />
+            ) : (
+              <IconMoon size={18} />
+            )}
+          </ActionIcon>
+        </Group>
+      </AppShell.Header>
+
+      <AppShell.Navbar 
+        p="md" 
+        style={{ 
+          backgroundColor: 'var(--mantine-color-dark-7)', 
+          borderRight: '1px solid var(--mantine-color-dark-4)' 
+        }}
+      >
+        {mainLinks.map((item) => (
+          <UnstyledButton
+            key={item.label}
+            onClick={() => navigate(item.link)}
+            style={{
+              width: '100%',
+              padding: 'var(--mantine-spacing-xs)',
+              borderRadius: 'var(--mantine-radius-sm)',
+              color: 'var(--mantine-color-brand-0)',
+              '&:hover': {
+                backgroundColor: 'var(--mantine-color-dark-6)'
+              }
+            }}
+          >
+            <Group>
+              <ThemeIcon 
+                size={30} 
+                variant="light" 
+                color="brand"
+              >
+                <item.icon style={{ width: rem(18), height: rem(18) }} />
+              </ThemeIcon>
+              <Text size="sm" c="brand.0">{item.label}</Text>
+            </Group>
+          </UnstyledButton>
+        ))}
+      </AppShell.Navbar>
+
+      <AppShell.Main>
+        <Outlet />
+      </AppShell.Main>
     </AppShell>
   );
 }

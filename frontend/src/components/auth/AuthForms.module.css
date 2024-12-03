@@ -1,0 +1,120 @@
+.formContainer {
+  max-width: 450px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom right, #141517, #1a1b1e);
+  border: 1px solid #373A40;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  transition: all 0.2s ease;
+  border: 2px solid #373A40;
+  background-color: #1a1b1e !important;
+  color: #ffffff !important;
+}
+
+.input:focus {
+  border-color: #4dabf7;
+  transform: translateY(-2px);
+  background-color: #212326 !important;
+}
+
+.inputGroup {
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.inputGroup .input {
+  background-color: #1a1b1e !important;
+}
+
+.inputGroup .input:focus {
+  background-color: #212326 !important;
+}
+
+.label {
+  font-weight: 500;
+  color: #E9ECEF !important;
+  margin-bottom: 4px;
+}
+
+.error {
+  background-color: rgba(241, 79, 79, 0.15);
+  color: #ff8787;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid rgba(255, 135, 135, 0.3);
+}
+
+.button {
+  background: linear-gradient(45deg, #4dabf7, #228be6);
+  transition: transform 0.2s ease;
+  color: white !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #5cb3f9, #339af0);
+}
+
+.socialButton {
+  border: 2px solid #373A40;
+  transition: all 0.2s ease;
+  color: #E9ECEF !important;
+  background-color: #1a1b1e !important;
+}
+
+.socialButton:hover {
+  background-color: #212326 !important;
+  transform: translateY(-2px);
+  border-color: #4dabf7;
+}
+
+.link {
+  color: #4dabf7;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #74c0fc;
+  text-decoration: underline;
+}
+
+.forgotPassword {
+  color: #74c0fc !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.forgotPassword:hover {
+  color: #4dabf7 !important;
+  text-decoration: underline;
+}
+
+.divider {
+  opacity: 0.7;
+  border-top-color: #373A40;
+}
+
+.text {
+  color: #E9ECEF !important;
+}
